@@ -1,0 +1,87 @@
+
+
+<?php
+
+require_once "/_config/config.php";
+
+if( !isset($_SESSION['user'])){
+    echo "<script>window.location='".base_url('/auth/login.php')"';</script>";
+} else {
+    ?>
+        <!DOCTYPE html>
+            <html lang="en">
+                <head>
+                    <meta charset="utf-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <meta name="description" content="">
+                    <meta name="author" content="">
+
+                    <title>Aplikasi Rumah Sakit</title>
+                    
+                    <!-- Bootstrap Core CSS -->
+                    <link href="<?=base_url('/_assets/css/bootstrap.min.css')?>" rel="stylesheet">
+                    <!-- icon -->
+                    <link rel="icon" href="<?=base_url('/_assets/img/icon1.png')?>">
+                    <!-- Simple-Sidebar CSS -->     
+                    <link href="<?=base_url('/_assets/css/simple-sidebar.css')?>" rel="stylesheet">
+                </head>
+
+                <body>
+
+                    <!-- jquery js  -->
+                    <script src="<?=base_url('_assets/js/jquery.js');?>"></script>
+                    <!-- bootstrap min js -->
+                    <script src="<?=base_url('_assets/js/bootstrap.min.js');?>"></script>
+
+                    <div id="wrapper">
+                        <!-- Sidebar -->
+                        <div id="sidebar-wrapper">
+                            <ul class="sidebar-nav">
+                                <li class="sidebar-brand">
+                                    <a href="#">Rumah Sakit</a>
+                                </li>
+                                <li>
+                                    <a href="#">Dashboard</a>
+                                </li>
+                                <li>
+                                    <a href="#">Shortcuts</a>
+                                </li>
+                                <li>
+                                    <a href="#">Overview</a>
+                                </li>
+                                <li>
+                                    <a href="#">Events</a>
+                                </li>
+                                <li>
+                                    <a href="#">About</a>
+                                </li>
+                                <li>
+                                    <a href="#">Services</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="page-content-wrapper">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h1>Simple Sidebar</h1>
+                                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+                                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </body>
+            </html>
+            
+            <?php
+        }
+            ?>
