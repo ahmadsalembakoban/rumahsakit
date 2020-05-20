@@ -54,7 +54,7 @@ if( !isset($_SESSION['user'])){
                                     <a href="#">Data Poliklinik</a>
                                 </li>
                                 <li>
-                                    <a href="#">Data Obat</a>
+                                    <a href="<?=base_url('obat/data.php')?>">Data Obat</a>
                                 </li>
                                 <li>
                                     <a href="#">Rekam Medis</a>
