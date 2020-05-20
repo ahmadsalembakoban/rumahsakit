@@ -2,11 +2,11 @@
 
 <?php
 
-require_once "/_config/config.php";
+require_once "_config/config.php";
 
 if( !isset($_SESSION['user'])){
-    echo "<script>window.location='".base_url('/auth/login.php')"';</script>";
-} else {
+    echo "<script>window.location='".base_url('auth/login.php')."';</script>";
+}
     ?>
         <!DOCTYPE html>
             <html lang="en">
@@ -39,49 +39,32 @@ if( !isset($_SESSION['user'])){
                         <div id="sidebar-wrapper">
                             <ul class="sidebar-nav">
                                 <li class="sidebar-brand">
-                                    <a href="#">Rumah Sakit</a>
+                                    <a href="#"><span class="text-primary"><b>Rumah Sakit</b></span></a>
                                 </li>
                                 <li>
-                                    <a href="#">Dashboard</a>
+                                    <a href="<?=base_url('dashboard')?>">Dashboard</a>
                                 </li>
                                 <li>
-                                    <a href="#">Shortcuts</a>
+                                    <a href="#">Data Pasien</a>
                                 </li>
                                 <li>
-                                    <a href="#">Overview</a>
+                                    <a href="#">Data Dokter</a>
                                 </li>
                                 <li>
-                                    <a href="#">Events</a>
+                                    <a href="#">Data Poliklinik</a>
                                 </li>
                                 <li>
-                                    <a href="#">About</a>
+                                    <a href="#">Data Obat</a>
                                 </li>
                                 <li>
-                                    <a href="#">Services</a>
+                                    <a href="#">Rekam Medis</a>
                                 </li>
                                 <li>
-                                    <a href="#">Contact</a>
+                                    <a href="<?=base_url('auth/logout.php')?>"><span class="text-danger"> Logout</span></a>
                                 </li>
                             </ul>
                         </div>
 
                         <div id="page-content-wrapper">
                             <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <h1>Simple Sidebar</h1>
-                                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-                                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                </body>
-            </html>
-            
-            <?php
-        }
-            ?>
