@@ -35,7 +35,7 @@
                     <th>No.</th>
                     <th>Nama Obat</th>
                     <th>Keterangan</th>
-                    <th><i class="glyphicon glyphicon-cog"></i></th>
+                    <th class="text-center"><i class="glyphicon glyphicon-cog"></i></th>
                 </tr> 
             </thead>
             <tbody>
