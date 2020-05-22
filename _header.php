@@ -49,7 +49,7 @@ if( !isset($_SESSION['user'])){
                                     <a href="#">Data Pasien</a>
                                 </li>
                                 <li>
-                                    <a href="#">Data Dokter</a>
+                                    <a href="<?=base_url('dokter/data.php')?>">Data Dokter</a>
                                 </li>
                                 <li>
                                     <a href="<?=base_url('poliklinik/data.php')?>">Data Poliklinik</a>
