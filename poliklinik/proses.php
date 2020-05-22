@@ -18,11 +18,15 @@
             echo "<script>alert('".$total." data berhasil ditambahkan'); window.location='data.php';</script>";
         } else {
             echo "<script>alert('Gagal tambah data, coba lagi'); window.location='generate.php';</script>";
-        }
-        
-        echo "<script>window.location='data.php';</script>";
+        }        
     } else if (isset($_POST['edit'])) {
-        
+        for($i=0; $i<count($_POST['id']); $i++){
+            $id = $_POST['id'][$i];
+            $nama = $_POST['nama'][$i];
+            $gedung = $_POST['gedung'][$i];
+            mysqli_query($conn, "UPDATE tb_poliklinik SET nama_poli = '$nama', gedung = '$gedung' WHERE id_poli = '$id'") or die(mysqli_error($conn));
+        }
+        echo "<script>alert('Data berhasil di update'); window.location='data.php';</script>";
     } 
     
 ?>

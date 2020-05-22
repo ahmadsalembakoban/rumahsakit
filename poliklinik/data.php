@@ -33,7 +33,7 @@
             <tbody>
                 <?php
                     $no = 1;
-                    $sql_poli = mysqli_query($conn, "SELECT * FROM tb_poliklinik") or die(mysqli_error($conn));
+                    $sql_poli = mysqli_query($conn, "SELECT * FROM tb_poliklinik ORDER BY nama_poli ASC") or die(mysqli_error($conn));
                         if(mysqli_num_rows($sql_poli) > 0) { 
                             while($data = mysqli_fetch_array($sql_poli)){
                             ?>

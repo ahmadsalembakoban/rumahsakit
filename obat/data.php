@@ -88,12 +88,13 @@
                             echo "<tr><td colspan=\"4\" align=\"center\">Data tidak ditemukan</td></tr>";
                         }
                 ?>
+                
             </tbody>
         </table>
     </div>
         
     <?php
-        if($_POST['pencarian'] == '') { 
+        if($_POST['pencarian'] == '') {  
             ?>
             <div style="float:left;">
                 <?php
