@@ -10,7 +10,7 @@
             <a href="" class="btn btn-default btn-xs">
                 <i class="glyphicon glyphicon-refresh"></i>
             </a>
-            <a href="add.php" class="btn btn-success btn-xs">
+            <a href="generate.php" class="btn btn-success btn-xs">
                 <i class="glyphicon glyphicon-plus"> Tambah Poli</i>
             </a>
         </div>
