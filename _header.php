@@ -21,11 +21,13 @@ if( !isset($_SESSION['user'])){
                     <title>Aplikasi Rumah Sakit</title>
                     
                     <!-- Bootstrap Core CSS -->
-                    <link href="<?=base_url('/_assets/css/bootstrap.min.css')?>" rel="stylesheet">
+                    <link href="<?=base_url('_assets/css/bootstrap.min.css')?>" rel="stylesheet">
                     <!-- icon -->
-                    <link rel="icon" href="<?=base_url('/_assets/img/icon1.png')?>">
+                    <link rel="icon" href="<?=base_url('_assets/img/icon1.png')?>">
                     <!-- Simple-Sidebar CSS -->     
-                    <link href="<?=base_url('/_assets/css/simple-sidebar.css')?>" rel="stylesheet">
+                    <link href="<?=base_url('_assets/css/simple-sidebar.css')?>" rel="stylesheet">
+                    <!-- datatables -->
+                    <link href="<?=base_url('_assets/libs/DataTables/datatables.min.css')?>" rel="stylesheet">
                 </head>
 
                 <body>
@@ -34,6 +36,8 @@ if( !isset($_SESSION['user'])){
                     <script src="<?=base_url('_assets/js/jquery.js');?>"></script>
                     <!-- bootstrap min js -->
                     <script src="<?=base_url('_assets/js/bootstrap.min.js');?>"></script>
+                    <!-- datatables js -->
+                    <script src="<?=base_url('_assets/libs/DataTables/datatables.min.js');?>"></script>
 
                     <div id="wrapper">
                         <!-- Sidebar -->
