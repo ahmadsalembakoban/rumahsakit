@@ -22,7 +22,20 @@
                 echo "<script>window.location='data.php';</script>";
             }
     } else if (isset($_POST['edit'])) {
+        $id = $_POST['id'];
+        $identitas = trim(mysqli_real_escape_string($conn, $_POST['identitas']));
+        $nama = trim(mysqli_real_escape_string($conn, $_POST['nama']));
+        $jk = trim(mysqli_real_escape_string($conn, $_POST['jk']));
+        $alamat = trim(mysqli_real_escape_String($conn, $_POST['alamat']));
+        $telp = trim(mysqli_real_escape_string($conn, $_POST['telp']));
 
+        $sql_cek_identitas = mysqli_query($conn, "SELECT * FROM tb_pasien WHERE nomor_identitas = '$identitas' AND id_pasien != '$id'") or die (mysqli_error($conn));
+            if(mysqli_num_rows($sql_cek_identitas) > 0) {
+                echo "<script>alert('Nomor identitas sudah pernah di input!'); window.location='edit.php?id=$id';</script>";
+            } else {
+                mysqli_query($conn, "UPDATE tb_pasien SET nomor_identitas = '$identitas', nama_pasien = '$nama', jenis_kelamin = '$jk', alamat = '$alamat', no_telp = '$telp' WHERE id_pasien = '$id'") or die(mysqli_error($conn));
+                echo "<script>window.location='data.php';</script>";
+            }
     } 
     
 ?>

@@ -3,7 +3,7 @@ include_once ('../_header.php');
 ?>
 
 <div class="box">
-    <h1>Doketer</h1>
+    <h1>Dokter</h1>
     <h4>
         <small>Tambah Data Dokter</small>
         <div class="pull-right">
@@ -33,7 +33,7 @@ include_once ('../_header.php');
                     <input type="number" name="telp" id="telp" class="form-control" required>
                 </div>
                 <div class="form-group pull-right">
-                    <input type="submit" name="add" value="Simpan" class="btn btn-success">
+                    <input type="submit" name="edit" value="Simpan" class="btn btn-success">
                 </div>
             </form>
         </div>
