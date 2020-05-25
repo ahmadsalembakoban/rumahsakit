@@ -15,15 +15,13 @@
             </a>
         </div>
     </h4>
-    <form action="" method="post" name="proses">
     <div class="table-responsive">
-        <table class="table table-stripped table-bordered table-hover">
+        <table class="table table-stripped table-bordered table-hover" id="pasien">
             <thead>
                 <tr>
-                    <th>No.</th>
                     <th>Nomor Identitas</th>
                     <th>Nama Pasien</th>
-                    <th>Jenis Kelamin</th>
+                    <th>Jenis Kelamin</th>  
                     <th>Alamat</th>
                     <th>No. Telepon</th>
                     <th class="text-center"><i class="glyphicon glyphicon-cog"></i></th>
@@ -34,6 +32,26 @@
             </tbody>
         </table>
     </div>
+    <script>
+        $(document).ready(function() {
+        $('#pasien').DataTable( {
+            "processing": true,
+            "serverSide": true,
+            "ajax": "pasien_data.php",
+            columnDefs : [
+                {
+                    "searchable" : "false",
+                    "orderable" : "false",
+                    "targets" : [5],
+                    "render" : function(data, type, row) {
+                        var btn = "<div class=\"text-center\"><a href=\"edit.php?id="+data+"\" class=\"btn btn-warning btn-xs\" style=\"margin-right: 5px;\"><i class=\"glyphicon glyphicon-edit\"></i></a><a href=\"del.php?id="+data+"\" onclick=\"return confirm('Yakin menghapus data?')\" class=\"btn btn-danger btn-xs\"><i class=\"glyphicon glyphicon-trash\"></i></a></div>";
+                        return btn;
+                    }
+                }
+            ]
+        } );
+        } );
+    </script>    
 </div>
 
 <?php include_once ('../_footer.php'); ?>
