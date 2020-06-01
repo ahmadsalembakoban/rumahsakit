@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit0c3a86c256fff66cea02f066e514a8dc
+class ComposerStaticInit87d67a62be0b9183af59eb5d5dd7dd24
 {
     public static $files = array (
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
@@ -19,11 +19,6 @@ class ComposerStaticInit0c3a86c256fff66cea02f066e514a8dc
         'R' => 
         array (
             'Ramsey\\Uuid\\' => 12,
-            'Ramsey\\Collection\\' => 18,
-        ),
-        'B' => 
-        array (
-            'Brick\\Math\\' => 11,
         ),
     );
 
@@ -36,21 +31,24 @@ class ComposerStaticInit0c3a86c256fff66cea02f066e514a8dc
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
         ),
-        'Ramsey\\Collection\\' => 
+    );
+
+    public static $prefixesPsr0 = array (
+        'P' => 
         array (
-            0 => __DIR__ . '/..' . '/ramsey/collection/src',
-        ),
-        'Brick\\Math\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/brick/math/src',
+            'PHPExcel' => 
+            array (
+                0 => __DIR__ . '/..' . '/phpoffice/phpexcel/Classes',
+            ),
         ),
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit0c3a86c256fff66cea02f066e514a8dc::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit0c3a86c256fff66cea02f066e514a8dc::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit87d67a62be0b9183af59eb5d5dd7dd24::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit87d67a62be0b9183af59eb5d5dd7dd24::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit87d67a62be0b9183af59eb5d5dd7dd24::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

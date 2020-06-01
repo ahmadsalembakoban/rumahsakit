@@ -13,6 +13,9 @@
             <a href="add.php" class="btn btn-success btn-xs">
                 <i class="glyphicon glyphicon-plus"> Tambah Pasien</i>
             </a>
+            <a href="import.php" class="btn btn-info btn-xs">
+                <i class="glyphicon glyphicon-import"> Import Data</i>
+            </a>
         </div>
     </h4>
     <div class="table-responsive">
